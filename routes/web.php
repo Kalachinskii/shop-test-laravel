@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', \App\Http\Controllers\Main\IndexController::class)->name('main.index');
+// Категории
 Route::group(['prefix' => 'categories'], function () {
     Route::get('/', \App\Http\Controllers\Category\IndexController::class)->name('category.index');
     Route::get('/create', \App\Http\Controllers\Category\CreateController::class)->name('category.create');

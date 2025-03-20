@@ -22,10 +22,10 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <form action="{{ route('category.store') }}" method="POST" class="d-flex">
+            <div class="row-12">
+                <form action="{{ route('category.store') }}" method="POST" class="d-flex ">
                     @csrf
-                    <div class="form-grup">
+                    <div class="form-grup col-4">
                         <input type="text" name="title" class="form-control" placeholder="Наименование">
                     </div>
                     <div class="form-grup">

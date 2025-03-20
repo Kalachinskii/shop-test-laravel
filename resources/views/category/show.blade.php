@@ -21,42 +21,40 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
+
             <div class="row">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header d-flex">
-                                <div>
-                                    <a href="{{ route('category.edit', $category->id) }}"
-                                        class="btn btn-primary">Редактировать</a>
-                                </div>
-                                <form class="pl-3" action="{{ route('category.delete', $category->id) }}" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <input type="submit" class="btn btn-danger" value="Удалить">
-                                </form>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header d-flex">
+                            <div>
+                                <a href="{{ route('category.edit', $category->id) }}"
+                                    class="btn btn-primary">Редактировать</a>
                             </div>
+                            <form class="pl-3" action="{{ route('category.delete', $category->id) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" class="btn btn-danger" value="Удалить">
+                            </form>
                         </div>
-                        <!-- /.card-header -->
-                        <div class="card-body table-responsive p-0">
-                            <table class="table table-hover">
-                                <tbody>
-                                    <tr>
-                                        <td>ID</td>
-                                        <td>{{ $category->id }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Наименование</td>
-                                        <td>{{ $category->title }}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-bordered">
+                            <thead>
+                                <th style="width: 80px">ID</th>
+                                <th>Наименование</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ $category->id }}</td>
+                                    <td>{{ $category->title }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
             </div>
         </div>
         <!-- /.row -->

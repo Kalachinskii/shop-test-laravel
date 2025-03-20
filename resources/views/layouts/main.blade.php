@@ -200,10 +200,12 @@
             @yield('content')
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-{{ now()->year() }}<a
-                    href="{{ route('main.index') }}">Магазинчик</a>.</strong>
-            Все права защищены
+        <footer class="main-footer d-dlex justify-content-between">
+            <strong>
+                <span>Copyright &copy; 2014-{{ now()->year }}</span>
+                <a href="{{ route('main.index') }}">Магазинчик</a>
+            </strong>
+            <span>Все права защищены</span>
         </footer>
 
         <!-- Control Sidebar -->

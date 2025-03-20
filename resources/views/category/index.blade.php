@@ -19,49 +19,39 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content ">
         <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="{{ route('category.create') }}" class="btn btn-primary">Добавить</a>
-                            </div>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body table-responsive p-0">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Наименование</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($categorys as $category)
-                                        <tr>
-                                            <td>{{ $category->id }}</td>
-                                            <td>
-                                                <a href="{{ route('category.show', $category->id) }}">
-                                                    {{ $category->title }}
-                                                </a>
-                                            </td>
-
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <a href="{{ route('category.create') }}" class="btn btn-primary">Добавить</a>
                     </div>
-                    <!-- /.card -->
                 </div>
+                <!-- /.card-header -->
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-bordered">
+                        <thead>
+                            <th style="width: 80px">ID</th>
+                            <th>Наименование</th>
+                        </thead>
+                        <tbody>
+                            @foreach ($categorys as $category)
+                                <tr>
+                                    <td>{{ $category->id }}</td>
+                                    <td>
+                                        <a href="{{ route('category.show', $category->id) }}">
+                                            {{ $category->title }}
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
             </div>
         </div>
-        <!-- /.row -->
-        </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
 @endsection
